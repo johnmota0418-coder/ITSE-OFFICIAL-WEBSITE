@@ -51,5 +51,5 @@ jobs:
         with:
           app-name: 'TransmissionData'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6BD84C1C30EA4AB082566E70121DD500 }}
-          package: . # This was the missing parameter. It tells Azure to deploy the contents of the current directory.
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_TRANSMISSIONDATA }}
+          package: .
