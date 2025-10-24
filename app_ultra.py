@@ -12,11 +12,12 @@ import tempfile
 
 # We will lazy-load heavy ML libraries (faiss, sentence_transformers) when needed
 # to reduce memory usage at startup on small hosts (e.g. Render free instances).
+# Deployment update: Optimized for Azure App Service with blob storage integration
 
 # Global semaphore to limit concurrent requests
 request_semaphore = asyncio.Semaphore(2)  # Max 2 concurrent requests
 
-app = FastAPI(title="Clarity Grid Chatbot - Ultra-Reduced Dataset (16,737 Lines) - Azure Blob Storage")
+app = FastAPI(title="Clarity Grid Chatbot - Ultra-Reduced Dataset (16,737 Lines) - Azure Cloud Optimized")
 
 # Template directory configuration for Azure deployment
 template_dir = os.path.join(os.path.dirname(__file__), "../templates")
