@@ -1,3 +1,9 @@
+# Force CPU-only versions for torch/torchvision, which are dependencies
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+torchvision
+
+# Your main application requirements
 fastapi==0.104.1
 uvicorn[standard]==0.24.0
 jinja2==3.1.2
